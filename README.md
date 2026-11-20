@@ -29,17 +29,6 @@ The eligible waveform dataset comprised **21,388 recordings**, partitioned by pa
 
 These are **research evaluation results**, not guarantees of performance in clinical settings.
 
-## Architecture
-
-```mermaid
-flowchart TD
-    A[PTB-XL waveforms and metadata] --> B[Validation, labels and patient-disjoint folds]
-    B --> C[Training-only normalization and model training]
-    C --> D[Frozen CNN and serialized artifacts]
-    E[Synthetic 12-lead ECG sample] --> F[FastAPI inference service]
-    D --> F
-    F --> G[Five class scores and threshold decisions]
-```
 
 ## Run the frozen model locally
 

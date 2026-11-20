@@ -1,0 +1,42 @@
+
+name: ECG Capstone CI
+
+# Run checks whenever code is pushed or a PR is opened.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  code-checks:
+    name: Python Code Checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check Python syntax
+        run: |
+          python -m compileall -q src
+
+      - name: Verify required project files
+        run: |
+          test -f README.md
+          test -f requirements.txt
+          test -f configs/default.yaml
+          test -f src/ecg/data/download.py
+          test -f src/ecg/data/validate_remote.py
+          test -f src/ecg/utils/seed.py
+
+      - name: Confirm code checks completed
+        run: echo "Phase 0 code checks passed"

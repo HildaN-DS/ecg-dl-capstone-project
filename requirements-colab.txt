@@ -1,0 +1,8 @@
+
+# PTB-XL ECG Capstone - Google Colab dependencies
+# Python and PyTorch are provided by the selected Colab runtime.
+# Do not install local requirements.txt into Colab.
+
+wfdb==4.2.0
+PyYAML==6.0.3
+jedi==0.19.2

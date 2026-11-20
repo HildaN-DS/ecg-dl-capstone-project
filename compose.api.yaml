@@ -1,0 +1,27 @@
+# Local-only, research-use FastAPI container.
+services:
+  ecg-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    image: ecg-research-api:phase4
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      ECG_ARTIFACTS_DIR: /artifacts
+      ECG_DEVICE: cpu
+    volumes:
+      - type: bind
+        source: ${ECG_ARTIFACTS_HOST_DIR:?Set ECG_ARTIFACTS_HOST_DIR to the local frozen artifacts directory}
+        target: /artifacts
+        read_only: true
+    restart: "no"
+    read_only: true
+    tmpfs:
+      - /tmp:rw,nosuid,size=64m
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    pids_limit: 100
+    mem_limit: 2g

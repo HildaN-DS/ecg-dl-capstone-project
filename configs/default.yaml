@@ -1,0 +1,34 @@
+
+
+project:
+  name: "Deep Learning-Based Classification of Cardiac Abnormalities from 12-Lead ECG Signals"
+  course: "DSA 8401 - Applied Machine Learning"
+  institution: "Strathmore University"
+  task: "ecg-multilabel-classification"
+  seed: 42
+  clinical_use: false
+
+
+dataset:
+  name: "PTB-XL"
+  version: "1.0.3"
+  sampling_rate: 100
+  signal_length: 1000
+  num_leads: 12
+
+  labels:
+    - NORM
+    - MI
+    - STTC
+    - CD
+    - HYP
+
+  train_folds: [1, 2, 3, 4, 5, 6, 7, 8]
+  val_folds: [9]
+  test_folds: [10]
+
+paths:
+  raw_data: "data/raw/ptb-xl"
+  processed_data: "data/processed"
+  artifacts: "artifacts"
+  reports: "reports"

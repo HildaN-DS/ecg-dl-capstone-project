@@ -1,0 +1,27 @@
+
+# Data handling
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.14.1
+wfdb==4.2.0
+
+# Classical machine learning
+scikit-learn==1.5.2
+
+# Configuration
+PyYAML==6.0.2
+
+# Visualization
+matplotlib==3.9.2
+seaborn==0.13.2
+
+# API
+fastapi==0.115.6
+uvicorn==0.34.0
+pydantic==2.10.4
+python-multipart==0.0.20
+
+# Testing and linting
+pytest==8.3.4
+httpx==0.28.1
+ruff==0.8.4

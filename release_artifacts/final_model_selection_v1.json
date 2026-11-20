@@ -1,0 +1,64 @@
+{
+  "record": "final_model_selection_v1",
+  "status": "frozen_before_test_evaluation",
+  "selected_experiment": "cnn1d_baseline_v1",
+  "selected_checkpoint": "/content/drive/MyDrive/ECG DL Capstone Project/artifacts/cnn1d_baseline_v1/best_model.pt",
+  "checkpoint_sha256": "7bd6298ad5840de15977b25b3f8b9ed494ba633e2f19c682716bbe2c128a6176",
+  "class_order": [
+    "NORM",
+    "MI",
+    "STTC",
+    "CD",
+    "HYP"
+  ],
+  "thresholds": [
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5
+  ],
+  "selection_metric": "validation_macro_ap",
+  "training_folds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "validation_fold": 9,
+  "held_out_test_fold": 10,
+  "normalization_artifact": "/content/drive/MyDrive/ECG DL Capstone Project/artifacts/ptbxl_normalization_v1.json",
+  "candidate_models": {
+    "cnn1d_baseline_v1": {
+      "name": "CNN Baseline",
+      "best_epoch": 17,
+      "validation_macro_ap": 0.7997197326881432,
+      "validation_macro_f1": 0.7172348238505231
+    },
+    "cnn1d_posweighted_v1": {
+      "name": "Weighted CNN",
+      "best_epoch": 15,
+      "validation_macro_ap": 0.7987791293199319,
+      "validation_macro_f1": 0.7278544850862103
+    },
+    "lstm_bidirectional_v1": {
+      "name": "LSTM 20 epochs",
+      "best_epoch": 20,
+      "validation_macro_ap": 0.7716677998536456,
+      "validation_macro_f1": 0.6821276278315225
+    },
+    "lstm_bidirectional_40ep_v1": {
+      "name": "Extended LSTM",
+      "best_epoch": 30,
+      "validation_macro_ap": 0.7931542913055263,
+      "validation_macro_f1": 0.6943705787732432
+    }
+  },
+  "validation_tuned_thresholds_used": false,
+  "test_evaluated_at_selection": false,
+  "clinical_use_approved": false
+}

@@ -1,0 +1,85 @@
+{
+  "experiment": "final_test_cnn1d_v1",
+  "evaluation_type": "held_out_test",
+  "selected_model": "cnn1d_baseline_v1",
+  "checkpoint_epoch": 17,
+  "checkpoint_sha256": "7bd6298ad5840de15977b25b3f8b9ed494ba633e2f19c682716bbe2c128a6176",
+  "normalization_sha256": "5b47c7dc999692e4fba7867c6b539acf6cf9ca205838a4aece71545512994d94",
+  "selection_record_sha256": "34086c574d059eb483f4905c7fd6d704071ff1c612ce731d63385e4283be2426",
+  "test_fold": 10,
+  "test_recordings": 2158,
+  "class_order": [
+    "NORM",
+    "MI",
+    "STTC",
+    "CD",
+    "HYP"
+  ],
+  "thresholds": [
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5
+  ],
+  "summary": {
+    "n_samples": 2158,
+    "threshold": 0.5,
+    "macro_ap": 0.8041541136257356,
+    "macro_roc_auc": 0.9146767145750028,
+    "macro_f1": 0.7103996504727935,
+    "micro_f1": 0.7547885454200645,
+    "mean_binary_log_loss": 0.29059267529808286
+  },
+  "per_class": [
+    {
+      "class": "NORM",
+      "support": 963,
+      "prevalence": 0.4462465245597776,
+      "ap": 0.9092788400556719,
+      "roc_auc": 0.9358029518980521,
+      "f1": 0.8496605237633366,
+      "log_loss": 0.3231857858825794
+    },
+    {
+      "class": "MI",
+      "support": 550,
+      "prevalence": 0.2548656163113994,
+      "ap": 0.8185370061624648,
+      "roc_auc": 0.9161770691994572,
+      "f1": 0.6914344685242518,
+      "log_loss": 0.31101491903079215
+    },
+    {
+      "class": "STTC",
+      "support": 521,
+      "prevalence": 0.24142724745134383,
+      "ap": 0.8090300786630505,
+      "roc_auc": 0.9299441771791244,
+      "f1": 0.7370517928286853,
+      "log_loss": 0.2834751375531037
+    },
+    {
+      "class": "CD",
+      "support": 496,
+      "prevalence": 0.22984244670991658,
+      "ap": 0.8234398907191522,
+      "roc_auc": 0.9063094406273047,
+      "f1": 0.7125307125307125,
+      "log_loss": 0.30191810362314503
+    },
+    {
+      "class": "HYP",
+      "support": 262,
+      "prevalence": 0.12140871177015755,
+      "ap": 0.6604847525283387,
+      "roc_auc": 0.885149933971076,
+      "f1": 0.5613207547169812,
+      "log_loss": 0.23336943040079408
+    }
+  ],
+  "weights_modified": false,
+  "normalization_refitted": false,
+  "thresholds_retuned": false,
+  "test_used_for_model_selection": false
+}

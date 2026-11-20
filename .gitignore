@@ -1,0 +1,85 @@
+
+# ==========================================
+# Python environments and caches
+# ==========================================
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# ==========================================
+# Secrets and local configuration
+# ==========================================
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# ECG datasets and generated arrays
+# ==========================================
+/data/
+*.dat
+*.hea
+*.npy
+*.npz
+
+# ==========================================
+# Generated model checkpoints
+# ==========================================
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# ==========================================
+# Verified frozen inference artifacts
+# ==========================================
+# Allow only the approved model checkpoint.
+!release_artifacts/
+!release_artifacts/cnn1d_baseline_v1/
+!release_artifacts/cnn1d_baseline_v1/best_model.pt
+
+# ==========================================
+# Training and experiment outputs
+# ==========================================
+/artifacts/*
+!/artifacts/.gitkeep
+/reports/results/
+
+# ==========================================
+# Frontend and supplementary documentation
+# ==========================================
+/frontend/
+/README_*.md
+
+# ==========================================
+# Jupyter
+# ==========================================
+.ipynb_checkpoints/
+
+# ==========================================
+# IDE and operating system
+# ==========================================
+.vscode/
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# LaTeX build files
+# ==========================================
+*.aux
+*.log
+*.toc
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+
+# ==========================================
+# Local archives
+# ==========================================
+*.zip

@@ -1,0 +1,16 @@
+# Dockerfile-specific build context for BuildKit.
+# Excludes all data, artifacts, credentials, tests and notebooks by default.
+**
+!requirements-api.txt
+!src/
+!src/__init__.py
+!src/ecg/
+!src/ecg/__init__.py
+!src/ecg/api/
+!src/ecg/api/*.py
+!src/ecg/features/
+!src/ecg/features/*.py
+!src/ecg/models/
+!src/ecg/models/*.py
+!src/ecg/inference/
+!src/ecg/inference/*.py

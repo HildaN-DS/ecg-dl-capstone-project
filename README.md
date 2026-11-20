@@ -92,7 +92,7 @@ For immediate verification, use the Docker API and synthetic ECG sample describe
 | `src/ecg/api/main.py` | FastAPI service |
 | `Dockerfile.api`, `compose.api.yaml` | Container build and local deployment |
 | `samples/`, `scripts/predict_sample.py` | Synthetic ECG and direct API test |
-| `reports/` | Final LaTeX report source and compiled PDF |
+| `reports/` | Project report as a PDF and EDA report |
 | `AI_USE.md` | AI assistance disclosure |
 
 ## References

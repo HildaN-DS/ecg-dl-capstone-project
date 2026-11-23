@@ -77,9 +77,9 @@ The reproducible implementation is organized as follows:
 
 Training was conducted using Google Colab with patient-disjoint PTB-XL folds: 1–8 for training, 9 for validation and 10 for testing.
 
-Full retraining requires the external PTB-XL dataset, preprocessing outputs and training-fitted artifacts. These are not all included in the submission. The provided frozen CNN checkpoint and normalization artifacts support reproducible inference without retraining.
+The trained model can be reproduced at inference time using the supplied checkpoint, normalization parameters, Dockerized FastAPI service and synthetic ECG sample.
 
-For immediate verification, use the Docker API and synthetic ECG sample described in the Quick Start section.
+Reproducing the training experiments requires downloading PTB-XL v1.0.3 and regenerating the preprocessing outputs and training-fitted artifacts using the provided scripts. The intermediate training outputs are not distributed with the repository.
 
 ## Repository contents
 
